@@ -1,4 +1,4 @@
-package br.com.ada.appvendas.service.abrirvenda;
+package br.com.ada.appvendas.service.realizarvenda;
 
 import br.com.ada.appvendas.entity.Item;
 import br.com.ada.appvendas.entity.Pessoa;
@@ -6,9 +6,10 @@ import br.com.ada.appvendas.entity.Produto;
 import br.com.ada.appvendas.entity.Venda;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 
-public class AberturaVenda implements AbrirVenda{
+public class ServicoVenda implements VendaService {
 
     private Map<String, Item> carrinhoCompras;
 
@@ -92,5 +93,18 @@ public class AberturaVenda implements AbrirVenda{
         return "AberturaVenda{" +
                 "carrinhoCompras=" + carrinhoCompras +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ServicoVenda that = (ServicoVenda) o;
+        return Objects.equals(carrinhoCompras, that.carrinhoCompras);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(carrinhoCompras);
     }
 }

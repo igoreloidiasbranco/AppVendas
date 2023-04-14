@@ -1,7 +1,7 @@
 package br.com.ada.appvendas.main;
 
 import br.com.ada.appvendas.entity.*;
-import br.com.ada.appvendas.service.abrirvenda.AberturaVenda;
+import br.com.ada.appvendas.service.realizarvenda.ServicoVenda;
 import br.com.ada.appvendas.service.criarproduto.CadastroProduto;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class AberturaVendaMain {
+public class ServicoVendaMain {
     public static void main(String[] args) {
 
         CadastroProduto novoProduto = new CadastroProduto();
@@ -20,7 +20,7 @@ public class AberturaVendaMain {
 
         Produto cafe = novoProduto.criarProduto("003", "Café", 15.00, 30);
 
-        Produto manteiga = novoProduto.criarProduto("004","Manteiga", 4.00,10);
+        Produto manteiga = novoProduto.criarProduto("004","Manteiga",4.00,10);
 
 
         List<Produto> listaProduto = new ArrayList<>();
@@ -36,7 +36,7 @@ public class AberturaVendaMain {
 
 
 
-        AberturaVenda aberturaVenda = new AberturaVenda();
+        ServicoVenda aberturaVenda = new ServicoVenda();
 
         String dataTempo = getDataTempo();
 
