@@ -7,4 +7,29 @@ public class Item {
 
 
 
+
+    public int getQtdeCompraProduto() {
+        return qtdeCompraProduto;
+    }
+
+    public void setQtdeCompraProduto(int qtdeCompraProduto) {
+        this.qtdeCompraProduto = qtdeCompraProduto;
+    }
+
+    public Produto getProduto() {
+        return produto;
+    }
+
+    public void setProduto(Produto produto) {
+        this.produto = produto;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "qtdeCompraProduto = " + qtdeCompraProduto +
+                ", produto = " + produto +
+                '}';
+    }
 }

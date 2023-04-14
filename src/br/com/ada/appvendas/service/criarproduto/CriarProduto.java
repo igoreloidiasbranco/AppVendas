@@ -4,5 +4,6 @@ import br.com.ada.appvendas.entity.Produto;
 
 public interface CriarProduto {
 
-    Produto criarProduto (String nome, double preco, int qtdeEstoque);
+    Produto criarProduto (String codigo, String nome, double preco, int qtdeEstoque);
+
 }

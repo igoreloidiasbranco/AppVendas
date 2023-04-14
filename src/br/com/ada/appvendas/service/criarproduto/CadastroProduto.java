@@ -5,9 +5,14 @@ import br.com.ada.appvendas.entity.Produto;
 public class CadastroProduto implements CriarProduto {
 
     @Override
-    public Produto criarProduto(String nome, double preco, int qtdeEstoque) {
+    public Produto criarProduto(String codigo, String nome, double preco, int qtdeEstoque) {
 
-        Produto produto = new Produto(nome, preco, qtdeEstoque);
+        if (nome == null || preco == 0){
+            throw new RuntimeException("Produto sem nome ou valor de venda igual a zero, não pode ser cadastrado ");
+        }
+
+        Produto produto = new Produto(codigo, nome, preco, qtdeEstoque);
         return produto;
     }
+
 }

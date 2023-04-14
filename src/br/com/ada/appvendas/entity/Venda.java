@@ -1,24 +1,21 @@
 package br.com.ada.appvendas.entity;
 
-import java.security.Key;
-import java.time.LocalDate;
-import java.util.Map;
+import java.util.List;
+
 
 public class Venda {
-   private LocalDate data;
+   private String dataHora;
    private Pessoa cliente;
-   private Map<Key, Item> listaItens;
+   private List<Item> listaItens;
+   private double totalVenda;
 
 
-
-
-
-    public LocalDate getData() {
-        return data;
+    public String getDataHora() {
+        return dataHora;
     }
 
-    public void setData(LocalDate data) {
-        this.data = data;
+    public void setDataHora(String dataHora) {
+        this.dataHora = dataHora;
     }
 
     public Pessoa getCliente() {
@@ -29,11 +26,33 @@ public class Venda {
         this.cliente = cliente;
     }
 
-    public Map<Key, Item> getListaItens() {
+    public List<Item> getListaItens() {
         return listaItens;
     }
 
-    public void setListaItens(Map<Key, Item> listaItens) {
+    public void setListaItens(List<Item> listaItens) {
         this.listaItens = listaItens;
     }
-}
+
+    public double getTotal() {
+        return totalVenda;
+    }
+
+    public void setTotal(double total) {
+        this.totalVenda = total;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Venda{" +
+                "data = " + dataHora +
+                ", cliente = " + cliente +
+                ", listaItens = " + listaItens +
+                ", total = " + totalVenda +
+                '}';
+    }
+
+    }
+
+
